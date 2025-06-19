@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rain root</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="javascript.js">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Rain root</h1>
+    <form id="wateringForm">
+      <label for="cropType">Select Crop:</label>
+      <select id="cropType" name="cropType">
+        <option value="corn">Corn</option>
+        <option value="wheat">Wheat</option>
+        <option value="rice">Rice</option>
+        <option value="tomato">Tomato</option>
+      </select>
+
+      <label for="temperature">Temperature (°C):</label>
+      <input type="number" id="temperature" name="temperature" required>
+
+      <label for="humidity">Humidity (%):</label>
+      <input type="number" id="humidity" name="humidity" required>
+
+      <button type="button" onclick="calculateWater()">Get Watering Recommendation</button>
+    </form>
+
+    <div id="result">
+      <p id="waterNeed"></p>
+    </div>
+  </div>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
